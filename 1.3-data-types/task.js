@@ -1,9 +1,18 @@
+"use sctrict";
 function calculateTotalMortgage(percent, contribution, amount, date) {
-    // код для задачи №1 писать здесь
-    // return totalAmount;
+  
+
+} 
+    return totalAmount;
 }
 
 function getGreeting(name) {
-    // код для задачи №2 писать здесь
-    // return greeting;
+ let greeting;
+if (name === 'null' || name === 'undefined' || name === '') {
+  greeting = "Привет, мир! Меня зовут Аноним";
+}
+else {
+  greeting = `Привет, мир! Меня зовут ${name}`
+}
+   return greeting;
 }
