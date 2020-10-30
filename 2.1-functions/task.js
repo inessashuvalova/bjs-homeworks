@@ -51,8 +51,7 @@ function getAverageMark(marks) {
   else { 
   for (let i = 0; i < marks.length; i++) {
    averageMark = averageMark + marks[i];
-   averageMark = averageMark / marks.length
-   return averageMark;
   }
+   return averageMark = averageMark / marks.length;
 }
 }
