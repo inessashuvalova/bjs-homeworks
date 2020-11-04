@@ -73,11 +73,27 @@ class PrintEditionItem {
             }
         }
 
-//     findBookBy(type, value) 
-    
+    findBookBy(type, value) {
+            let findBook;
+            for (let key in this.books) {
+                if (this.books[key][type] === value) {
+                    findBook = this.books[key].name;
+            }
+        }
+            return findBook;
+    }
+    giveBookByName(bookName) {
+            let giveBook;
+            for (let key in this.books) {
+                if (this.books[key][name] === bookName) {
+                    giveBook = this.books[key][name];
+                    this.books.splice(this.books[key], 1);
+                }
+        }
+            return giveBook;
+    }
+ }
 
-// giveBookByName(bookName) 
-}
 
 
 // Задача 3
