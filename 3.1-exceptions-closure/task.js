@@ -12,7 +12,7 @@ function validateCount(a) {
   try {
       return parseCount(a);
   } catch (e) {
-      return ('Невалидное значение');
+      return (e);
   }
 }
 
