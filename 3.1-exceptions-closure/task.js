@@ -53,6 +53,7 @@ class Triangle {
               return 'Ошибка! Треугольник не существует';
           }
   }
+  return TriangleFiction;
 }
    }
  
