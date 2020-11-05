@@ -1,6 +1,6 @@
 String.prototype.isPalindrome = function() {
-  let str = this.toUpperCase();
-  return str;
+  const source = this.toLowerCase().split("");
+  return source.join("") === source.reverse().join("");
 }
 
 
@@ -12,9 +12,9 @@ function getAverageMark(marks) {
    }
     else { 
     for (let i = 0; i < marks.length; i++) {
-      summaryMarks = averageMark + marks[i];
+      averageMark = averageMark + marks[i];
     }
-    averageMark = summaryMarks / marks.length;
+    averageMark = averageMark/ marks.length;
     Math.round(averageMark) = roundedAverage;
      return roundedAverage;
   }
@@ -27,11 +27,6 @@ function checkBirthday(birthday) {
     const parsedBirthday = new Date(birthday).getTime();
     let diff = now - birthday;
     let age = diff / 365.25 * 24 * 60 * 60 * 1000;
-    if (age > 18) {
-    return `Не желаете ли олд-фэшн, ${name}?`;}
-    else if (age < 18) {
-    return `Сожалею, ${name}, но я не могу вам продать алкоголь. Зато могу предложить вам замечательный клюквенный компот!`;
-  }
     return age >= 18;
        }
           
