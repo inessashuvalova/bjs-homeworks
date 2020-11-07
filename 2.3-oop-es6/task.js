@@ -1,29 +1,29 @@
 // Задача 1
 
 class PrintEditionItem {
-    constructor(name,releaseDate,pagesCount, state, type) {
+    constructor(name,releaseDate,pagesCount, state = 100, type = null) {
         this.name = name;
         this.releaseDate = releaseDate;
         this.pagesCount = pagesCount;
-        this.state = 100;
-        this.type = null;
+        this.state = state;
+        this.type = type;
     }
 
      fix() {
-        this.state = this.state * 1.5;
+        this.state =  1.5 * this.state;
         return this.state;
     }
 
-    set newState(state) {
+    set state(state) {
         if (state < 0) {
-            this.state = 0;
+            this._state = 0;
         }
         else if (state > 100) {
-            this.state = 100;
+            this._state = 100;
         }
     }  
-    get newState() {
-            return this.state
+    get state() {
+            return this._state
         }
     }
 
@@ -34,7 +34,7 @@ class PrintEditionItem {
         }
     }
     class Book extends PrintEditionItem {
-        constructor(name, releaseDate, pagesCount, state) {
+        constructor(author, name, releaseDate, pagesCount, state) {
             super(name, releaseDate, pagesCount, state)
             this.author = author;
             this.type = "book";
@@ -42,20 +42,20 @@ class PrintEditionItem {
     }
 
     class NovelBook extends Book {
-        constructor(name, releaseDate, pagesCount, state) {
-            super(name, releaseDate, pagesCount, state)
+        constructor(author, name, releaseDate, pagesCount, state) {
+            super(author, name, releaseDate, pagesCount, state)
             this.type = "novel";
     }
 }
     class FantasticBook extends Book {
-        constructor(name, releaseDate, pagesCount, state) {
-            super(name, releaseDate, pagesCount, state)
+        constructor(author, name, releaseDate, pagesCount, state) {
+            super(author, name, releaseDate, pagesCount, state)
             this.type = "fantastic";
     }
 }
     class DetectiveBook extends Book {
-        constructor(name, releaseDate, pagesCount, state) {
-            super(name, releaseDate, pagesCount, state)
+        constructor(author, name, releaseDate, pagesCount, state) {
+            super(author, name, releaseDate, pagesCount, state)
             this.type = "detective";
     }
     };
