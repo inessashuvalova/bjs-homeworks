@@ -89,7 +89,7 @@ class PrintEditionItem {
             return findBook;
     }
     giveBookByName(bookName) {
-            let giveBook;
+            let giveBook = null;
             for (let key in this.books) {
                 if (this.books[key][name] === bookName) {
                     giveBook = this.books[key][name];
@@ -98,7 +98,7 @@ class PrintEditionItem {
         }
             return giveBook;
     }
- }
+}
 
 
 
@@ -128,12 +128,11 @@ class StudentLog {
         let averageGrade = 0;
         if (diary[subject].length === 0) {
             return averageGrade;
-        }
-        else {
-            for (let i = 0; i < diary[subject].length; i++) {
-                averageGradeSum = averageGrade + diary[subject][i];
-            }
-            return averageGrade = averageGradeSum / diary[subject].length;
+        }   
+        for (let i = 0; i < diary[subject].length; i++) {
+            averageGrade = averageGrade + diary[subject][i];
+        } 
+        return averageGrade = averageGrade / diary[subject].length; 
         }
     }
-}
+
