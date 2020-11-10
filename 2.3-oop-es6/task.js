@@ -80,10 +80,10 @@ class PrintEditionItem {
         }
 
     findBookBy(type, value) {
-            let findBook;
+            let findBook = null;
             for (let key in this.books) {
                 if (this.books[key][type] === value) {
-                    findBook = this.books[key].name;
+                    findBook = this.books[key];
             }
         }
             return findBook;
@@ -91,8 +91,8 @@ class PrintEditionItem {
     giveBookByName(bookName) {
             let giveBook = null;
             for (let key in this.books) {
-                if (this.books[key][name] === bookName) {
-                    giveBook = this.books[key][name];
+                if (this.books[key]['name'] === bookName) {
+                    giveBook = this.books[key];
                     this.books.splice(this.books[key], 1);
                 }
         }
@@ -126,7 +126,7 @@ class StudentLog {
     }
     getAverageBySubject(subject) {
         let averageGrade = 0;
-        if (diary[subject].length === 0) {
+        if (diary[subject] === undefined) {
             return averageGrade;
         }   
         for (let i = 0; i < diary[subject].length; i++) {
@@ -136,3 +136,4 @@ class StudentLog {
         }
     }
 
+    getTotalAverage()
