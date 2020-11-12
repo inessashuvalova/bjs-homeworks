@@ -1,20 +1,28 @@
 const weapons = [new Knife(), new Staff(), new Axe(), new StormStaff(), new LongBow(), new Bow()];
 
 function getNames() {
-   return weapons.map(weapon); 
+   weapons.map(weapon); 
+   return weapon.name;
    }
 
-function getCountReliableWeapons(durability) {
-         return (weapons.filter(weapon)) 
-      };
+function getCountReliableWeapons(demandDurability) {
+    weapons.filter(weapon);
+    return weapon.durability > demandDurability;
+}
 
-function hasReliableWeapons(durability) {
-      (weapons.some(durability)) 
-         return weapon.durability;
-      };
+function hasReliableWeapons(demandDurability) {
+    weapons.some(weapon);
+    return weapon.durability > demandDurability
+}
 
-function getReliableWeaponsNames(durability) { 
-        return name > durability;
-      };
+function getReliableWeaponsNames(demandDurability) { 
+    weapons.filter(weapon);
+    return weapon.durability > demandDurability
+}
+
+function getTotalDamage () {
+     weapons.reduce(totalDamage, weapon);
+      return totalDamage + weapon.attack;
+}
       
-     
+   
