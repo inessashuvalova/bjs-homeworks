@@ -1,28 +1,25 @@
+// Задача 1
+console.clear();
 const weapons = [new Knife(), new Staff(), new Axe(), new StormStaff(), new LongBow(), new Bow()];
 
 function getNames() {
-   weapons.map(weapon); 
-   return weapon.name;
+   return weapons.map(weapon => weapon.name);
    }
 
 function getCountReliableWeapons(demandDurability) {
-    weapons.filter(weapon);
-    return weapon.durability > demandDurability;
+    return weapons.filter(weapon => weapon.durability > demandDurability);
 }
 
 function hasReliableWeapons(demandDurability) {
-    weapons.some(weapon);
-    return weapon.durability > demandDurability
+    return weapons.some(weapon => weapon.durability > demandDurability);
 }
 
 function getReliableWeaponsNames(demandDurability) { 
-    weapons.filter(weapon);
-    return weapon.durability > demandDurability
+    return (weapons.filter(weapon => weapon.durability > demandDurability).map(weapon => weapon.name));
 }
 
 function getTotalDamage () {
-     weapons.reduce(totalDamage, weapon);
-      return totalDamage + weapon.attack;
+    return weapons.reduce((totalDamage, weapon) => totalDamage + weapon.attack, 0);
 }
       
    
