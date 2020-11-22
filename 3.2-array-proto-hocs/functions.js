@@ -36,11 +36,8 @@ function getTotalDamage () {
   }
 
   function compareArrays(arr1, arr2) {
-    if (arr1 && arr2 && arr1.every((value, index) => value === arr2[index])) { 
-      return true; 
-    }
-    else {
-      return false; 
+    if (arr1 && arr2 && (arr1.length == arr2.length) && arr1.every((value, index) => value === arr2[index])) { 
+      return (arr1 && arr2 && arr1.every((value, index) => value === arr2[index])); 
     }
   }
 
@@ -50,7 +47,7 @@ function getTotalDamage () {
     return function memorizeReturn (...theArgs) {
 
       let searchArgs = memory.find(item => compareArrays(theArgs, item.args));
-      if (searchArgs != undefined) {
+      if (searchArgs) {
         return searchArgs.result;
       }
   
