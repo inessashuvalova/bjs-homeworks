@@ -7,7 +7,7 @@ function getNames() {
    }
 
 function getCountReliableWeapons(demandDurability) {
-    return weapons.filter(weapon => weapon.durability > demandDurability);
+   weapons.filter(weapon => (weapon.durability > askedDurability)).length;
 }
 
 function hasReliableWeapons(demandDurability) {
